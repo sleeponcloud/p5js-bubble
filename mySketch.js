@@ -16,10 +16,18 @@ function setup() {
     color(186, 229, 255), // 淺藍色
     color(218, 186, 255)  // 淺紫色
   ];
+
+ for (let i = 0; i < 10; i++) {
+    let x = random(width);
+    let y = random(height);
+    let col = random(colors);
+    let bubble = new Bubble(x, y, col);
+    bubbles.push(bubble);
+  }
 }
 
 function draw() {
-  background(135, 206, 250); // 使用淺灰色作為背景
+  background(135, 206, 250); // 使用淺藍色作為背景
 
   // 更新和顯示每個泡泡
   for (let i = 0; i < bubbles.length; i++) {
